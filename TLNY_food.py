@@ -16,12 +16,17 @@ while True:
         while True:
             if ans=='yes':
                 print('Let me know which food that you are wondering')
-                print("Each dishes will separated by a comma and in a quote")
-                food=str(input("Enter your dishes list:"))
-                print(random.choice(food))
-                
+                print("Each dishes will separated by a space.")
+                print("For example: bo_kho ca_chien nuong ")
+                food=(input("Enter your dishes list:"))
+                food_list=food.split()
+                random_list_food=random.choice(food_list)
+                print(random_list_food)
+              
                 break
             elif ans=="no":
+
+
                 print("TLNY FOOD have a lot of suggestion about dishes that you can consider")
                 print('How are you think about this dish:')
                 TLNY_food=["Boiled Chicken","Sticky rice cake","Jellied meat","Dried bamboo shoot soup","Spring roll","steammed sticky rice","Lean pork paste","Pig trotters","Pork belly","Fermented pork","Pork stuffed bitter melon soup","Meate stwed in cocony juice","Steamed momordica sweet rice"]
@@ -29,7 +34,8 @@ while True:
                 break
             else:
                 print("It has something mistake")
-                continue
+                break
+        break
 
                
             
